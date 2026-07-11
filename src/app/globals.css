@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030712;
+  --foreground: #f9fafb;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background-color: #0f1522;
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 300ms;
+}
+  
+.glass-card:hover {
+  box-shadow: 0 0 20px rgba(212,175,55,0.05);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.gold-text {
+  color: #D4AF37;
+}
+
+.gold-gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #D4AF37, #FDE047);
+}
+
+.bg-gold {
+  background-color: #D4AF37;
+  color: #030712;
+  font-weight: 600;
+  transition: all 300ms;
+}
+
+.bg-gold:hover {
+  background-color: #FDE047;
+}
+
+.border-gold {
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  transition: all 300ms;
+}
+
+.border-gold:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+}
+
+.gold-glow {
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+}
+
+.gold-icon-box {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background-color: #D4AF37;
+  color: #030712;
+  margin-bottom: 1rem;
+}
+
+.gold-icon-box-outline {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background-color: rgba(212, 175, 55, 0.1);
+  color: #D4AF37;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
