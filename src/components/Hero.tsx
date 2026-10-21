@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
-      {/* Background Particles/Stars (simulated with CSS/framer) */}
+      {/* Background Particles/Stars */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[20%] left-[10%] w-1 h-1 bg-[#D4AF37] rounded-full opacity-50 blur-[1px]"></div>
         <div className="absolute top-[40%] right-[20%] w-1.5 h-1.5 bg-[#D4AF37] rounded-full opacity-60 blur-[1px]"></div>
@@ -29,29 +29,32 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37]/30 bg-[#030712]/50 mb-8">
               <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></div>
               <span className="text-[#D4AF37] text-xs font-semibold tracking-widest uppercase">
-                15+ Years of Excellence
+                14+ Years Insurance Leadership &bull; 30+ Years Overall
               </span>
             </div>
 
             {/* Huge Typography */}
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-6">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-4">
               <span className="text-white block">M. JAYA</span>
               <span className="text-[#D4AF37] block">KUMAR</span>
             </h1>
 
             {/* Subtitle */}
-            <h2 className="text-[#D4AF37] text-2xl md:text-3xl font-semibold mb-6">
-              Assistant Manager
+            <h2 className="text-[#D4AF37] text-xl md:text-2xl font-semibold mb-2">
+              B.B.A. &bull; Insurance Sales &amp; Team Leadership
             </h2>
+            <p className="text-gray-400 text-sm font-medium mb-6">
+              Assistant Manager at Aditya Birla Sun Life Insurance Co. Ltd
+            </p>
 
             {/* Key Skills Tagline */}
-            <p className="text-gray-300 text-sm md:text-base font-semibold tracking-[0.2em] uppercase leading-relaxed mb-8">
-              Leading Teams &bull; Driving Business Growth &bull; Building Lasting Customer Relationships
+            <p className="text-gray-300 text-xs md:text-sm font-semibold tracking-[0.15em] uppercase leading-relaxed mb-6">
+              Advisor Recruitment &bull; Open Market Sourcing &bull; Team Building &bull; Sales Mastery
             </p>
 
             {/* Description */}
             <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
-              Experienced insurance and business development professional with more than 15 years of leadership experience in insurance sales, recruitment, business growth, customer relationship management, and high-performing team development.
+              Results-driven insurance sales leader with 14+ years of proven excellence in recruiting insurance advisors, building high-performing teams, and sourcing major business across leading MNC insurers. Pan-India topper in recruitment and 5-time international tour winner.
             </p>
 
             {/* Buttons */}
@@ -60,14 +63,14 @@ export default function Hero() {
                 href="/resume.pdf" 
                 download="M_Jayakumar_Resume.pdf"
                 target="_blank" 
-                className="bg-gold px-8 py-3.5 rounded-full flex items-center gap-2 text-sm uppercase shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] transition-all"
+                className="bg-gold px-8 py-3.5 rounded-full flex items-center gap-2 text-sm uppercase shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] transition-all cursor-pointer"
               >
                 <Download size={18} />
                 DOWNLOAD RESUME
               </a>
               <a 
                 href="#contact" 
-                className="border-gold px-8 py-3.5 rounded-full flex items-center gap-2 text-sm uppercase font-semibold"
+                className="border-gold px-8 py-3.5 rounded-full flex items-center gap-2 text-sm uppercase font-semibold cursor-pointer"
               >
                 <Mail size={18} />
                 CONTACT ME
@@ -89,7 +92,7 @@ export default function Hero() {
               {/* Image Container */}
               <div className="absolute inset-4 rounded-full overflow-hidden bg-[#030712] z-10 border border-white/5">
                 <Image
-                  src="/profile_new.jpg"
+                  src="/profile_new.png"
                   alt="M. Jayakumar"
                   fill
                   className="object-cover object-top"

@@ -36,10 +36,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {['Home', 'About', 'Experience', 'Skills'].map((item) => (
+              {['Home', 'About', 'Experience', 'Skills', 'Education'].map((item) => (
                 <li key={item}>
                   <a href={`#${item.toLowerCase()}`} className="text-gray-400 hover:text-accent transition duration-300 flex items-center gap-2">
-                    <span className="text-accent text-xs">▹</span> {item}
+                    <span className="text-[#D4AF37] text-xs">&#9657;</span> {item}
                   </a>
                 </li>
               ))}

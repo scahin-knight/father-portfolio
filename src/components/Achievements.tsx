@@ -1,50 +1,70 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Trophy, Crown, TrendingUp, Users, Plane, ShieldCheck } from "lucide-react";
+import { Trophy, Crown, TrendingUp, Users, Plane, Smartphone, Users2, ShieldCheck } from "lucide-react";
 
 const achievements = [
   {
     num: "01",
-    icon: <Trophy size={20} />,
+    icon: <Trophy size={22} />,
     title: "Pan India Topper",
-    desc: "Top performer across national leaderboard."
+    badge: "National Honor",
+    desc: "Ranked #1 nationwide in Insurance Consultant recruitment at Bajaj Allianz & Reliance Life."
   },
   {
     num: "02",
-    icon: <Crown size={20} />,
-    title: "Multiple Promotions",
-    desc: "Two promotions at Bajaj Allianz alone."
+    icon: <Crown size={22} />,
+    title: "3 Fast-Track Promotions",
+    badge: "Career Growth",
+    desc: "Earned 2 consecutive promotions at Bajaj Allianz (2015-16 & 2016-17) and 1 promotion at HDFC Life."
   },
   {
     num: "03",
-    icon: <TrendingUp size={20} />,
-    title: "₹30 Lakhs Business",
-    desc: "Achieved at Kotak Life Insurance."
+    icon: <Plane size={22} />,
+    title: "5 International Tours Won",
+    badge: "Global Recognition",
+    desc: "Awarded 5 foreign tours for consistent, record-breaking sales and recruitment milestones."
   },
   {
     num: "04",
-    icon: <Users size={20} />,
+    icon: <Users size={22} />,
     title: "15 Club Members Produced",
-    desc: "Elite advisor tier developed under leadership."
+    badge: "Team Excellence",
+    desc: "Developed and mentored 15 elite club member insurance advisors within his branch teams."
   },
   {
     num: "05",
-    icon: <Plane size={20} />,
-    title: "Five International Tours",
-    desc: "Awarded for consistent performance."
+    icon: <TrendingUp size={22} />,
+    title: "₹30 Lakhs Business in 8 Mos",
+    badge: "Kotak Life DPO",
+    desc: "Generated ₹30 Lakhs in new business volume while handling Pollachi DPO at Kotak Life."
   },
   {
     num: "06",
-    icon: <ShieldCheck size={20} />,
-    title: "Excellent Leadership Record",
-    desc: "Trusted across six major insurers."
+    icon: <Smartphone size={22} />,
+    title: "INS-TAB Digital Topper",
+    badge: "Digital Innovation",
+    desc: "Top performer and agency pioneer in utilizing the INS-TAB digital application platform for policy logins."
+  },
+  {
+    num: "07",
+    icon: <Users2 size={22} />,
+    title: "100+ People Under Supervision",
+    badge: "Operations Command",
+    desc: "Direct daily operational leadership of up to 100 workforce personnel in production management."
+  },
+  {
+    num: "08",
+    icon: <ShieldCheck size={22} />,
+    title: "7 Top Insurers Trusted",
+    badge: "MNC Proven",
+    desc: "Proven leadership spanning Aditya Birla, HDFC Life, Max Bupa, Kotak, Religare, Bajaj & Reliance."
   }
 ];
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-20 relative">
+    <section id="achievements" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Title */}
@@ -57,33 +77,45 @@ export default function Achievements() {
           >
             Achievements
           </motion.h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent mx-auto mb-4"></div>
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
+            Quantifiable accolades and national milestones earned through relentless dedication and leadership excellence.
+          </p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {achievements.map((item, index) => (
             <motion.div
               key={item.num}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="glass-card p-8 min-h-[200px] flex flex-col justify-end relative"
+              transition={{ delay: index * 0.06 }}
+              className="glass-card p-7 min-h-[240px] flex flex-col justify-between relative group hover:border-[#D4AF37]/50 transition-all"
             >
               {/* Background Number */}
-              <div className="absolute top-4 right-6 text-7xl font-black text-white/[0.03] select-none pointer-events-none">
+              <div className="absolute top-3 right-4 text-6xl font-black text-white/[0.04] group-hover:text-[#D4AF37]/[0.08] transition-colors select-none pointer-events-none">
                 {item.num}
               </div>
 
-              {/* Icon Box */}
-              <div className="absolute top-8 left-8 gold-icon-box !mb-0 !w-14 !h-14 !rounded-2xl">
-                {item.icon}
+              {/* Top Row: Icon + Badge */}
+              <div className="flex items-center justify-between mb-6">
+                <div className="gold-icon-box !mb-0 !w-12 !h-12 !rounded-xl">
+                  {item.icon}
+                </div>
+                <span className="text-[10px] uppercase font-bold tracking-widest text-[#D4AF37] bg-[#D4AF37]/10 px-2.5 py-1 rounded-full border border-[#D4AF37]/20">
+                  {item.badge}
+                </span>
               </div>
 
-              <div className="mt-20">
-                <h3 className="text-white text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+              <div>
+                <h3 className="text-white text-lg font-bold mb-2 group-hover:text-[#D4AF37] transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 text-xs leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             </motion.div>
           ))}

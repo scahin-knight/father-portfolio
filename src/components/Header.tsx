@@ -8,8 +8,9 @@ const navLinks = [
   { name: "ABOUT", href: "#about" },
   { name: "EXPERIENCE", href: "#experience" },
   { name: "SKILLS", href: "#skills" },
-  { name: "SERVICES", href: "#services" },
   { name: "ACHIEVEMENTS", href: "#achievements" },
+  { name: "EDUCATION", href: "#education" },
+  { name: "SERVICES", href: "#services" },
   { name: "CONTACT", href: "#contact" },
 ];
 
@@ -35,7 +36,7 @@ export default function Header() {
           </div>
           <div className="hidden md:block">
             <h1 className="text-white font-bold text-sm tracking-wide">M. JAYAKUMAR</h1>
-            <p className="text-[#D4AF37] text-[10px] tracking-widest font-semibold uppercase">Insurance Leader</p>
+            <p className="text-[#D4AF37] text-[10px] tracking-widest font-semibold uppercase">Insurance Sales &amp; Leadership</p>
           </div>
         </div>
 
